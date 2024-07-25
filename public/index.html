@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="<%= BASE_URL %>font.css" rel="stylesheet">
+      <title><%= htmlWebpackPlugin.options.title %></title>
+      <script>
+          var apbd_coupon= {
+              base_url:'',
+              ajax_url:"/wp-admin/admin-ajax.php?_t=1",
+              price_format: {
+                  decimal_separator: '.',
+                  thousand_separator: ',',
+                  decimals: 2,
+                  symbol:'$',
+                  percent:'%',
+                  format: '${{amt}}'
+              },
+              ajax_nonce:"",
+              base_slug:"apbd-cp",
+              assets_path:'/',
+              app_logo:"logo.svg",
+              app_version:"1.0.0",
+              translation_obj: {
+                  availableLanguages: {
+                      en_US: "American English"
+                  },
+                  defaultLanguage: "en_US",
+                  translations: {
+                      "en_US": {
+
+                      }
+                  }
+              },
+              wc_amount: function ($amount) {
+                  try {
+                      return $amount.toFixed(apbd_coupon.decimalPlaces);
+                  }catch (e) {
+                      $amount=parseFloat($amount);
+                      return $amount.toFixed(apbd_coupon.decimalPlaces);
+                  }
+              },
+              wc_price: function ($amount) {
+                  $amount = parseFloat($amount);
+                  return apbd_coupon.currencySymbol + ' ' + apbd_coupon.wc_amount($amount);
+              },
+          }
+      </script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="AppsbdAdminPanel"></div>
+    <!-- built files will be auto injected -->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+  </body>
+</html>

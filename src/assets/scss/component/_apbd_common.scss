@@ -1,0 +1,206 @@
+.apbd-v-error{
+  color: red;
+  font-size: 14px;
+}
+.apbd-h-34px{
+  height:34px;
+}
+.b-agree-ctrn{
+  >*{
+    white-space: nowrap !important;
+    padding: 0;
+  }
+}
+.apbd-sd{
+  .elite-grid{
+    padding: 0px !important;
+    .elite-grid-content{
+      border-radius: 6px;
+    }
+  }
+}
+.o-visible{
+  overflow: visible !important;
+}
+.o-unset{
+  overflow: unset !important;
+}
+.small-note{
+  font-size: .675em;
+}
+.text-italic{
+  font-style: italic;
+}
+.app-content-body{
+  .multiselect-placeholder{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+  }
+  .card{
+    .card-body{
+      border-radius: inherit;
+      .apbd-body-nav
+      {
+        ul.nav-tabs{
+          li.nav-item{
+            .nav-link{
+              cursor: pointer;
+              border: none;
+              border-top-right-radius:0;
+              border-top-left-radius: 0;
+              &.active{
+                color: #fff;
+                background-color: var(--apbd-theme-color);
+              }
+            }
+            &:first-child{
+              .nav-link{
+                border-top-right-radius:0;
+                border-top-left-radius: 0.25rem;
+                margin-bottom: -1px;
+              }
+            }
+          }
+        }
+      }
+      .apsbd-default-card
+      {
+        border-radius: 2px;
+        overflow: hidden;
+        box-shadow: 0 0 5px -3px #bababa;
+        .card-body{
+          padding: 0rem 1rem;
+        }
+      }
+    }
+  }
+}
+form{
+  button[type=submit] {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    &::after {
+      width: 0px;
+    }
+  }
+}
+
+.apbd-pointer{
+  cursor: pointer;
+}
+.apbd-text-bold{
+  font-weight: bold;
+}
+.app-content-footer {
+  .app-version {
+    font-size: 12px;
+    color:#858383;
+  }
+}
+.apbd-cp{
+  font-size: 12px;
+  color:#858383;
+  &:hover {
+    >a{
+      color: var(--apbd-btn-bg-color);
+    }
+  }
+  >a{
+    font-style: normal;
+    text-decoration: none;
+    color:#858383;
+    font-weight: bold;
+  }
+}
+.swal2-container {
+  z-index: 10000;
+}
+.vt-img-picker {
+  position: relative;
+
+  .vt-remove-img-picker {
+    display: flex;
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.33);
+    @include transition(all 0.5s ease);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    > i {
+      color: #920b0b;
+      text-shadow: 0 0 12px #fff;
+      background: #ffffff36;
+      border-radius: 80%;
+      width: 21px;
+      height: 23px;
+
+    }
+  }
+  &:hover{
+    .vt-remove-img-picker {
+
+      opacity: 1;
+    }
+  }
+}
+.input-group {
+  &.multiselect-sm{
+    //max-height:31px;
+
+  }
+  .input-group-text{
+    .form-check{
+      display:flex;
+      align-items: center;
+      margin:0;
+      gap:5px;
+      .form-check-input {
+        border-color: #86b7fe;
+        &:checked{
+          background-color: #0d6efd;
+          border-color: #0d6efd;
+        }
+      }
+    }
+  }
+}
+.multiselect-wrapper {
+ // min-height: calc(var(--ms-border-width, 1px)* 2 + var(--ms-font-size, 13px)* var(--ms-line-height, 0.65) + var(--ms-py, .5rem)* 2);
+  min-height: 31px;
+}
+.multiselect {
+  min-height: 31px;
+  &.is-active {
+    outline: none !important;
+    box-shadow: none !important;
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+  }
+  .multiselect-placeholder {
+    padding-right: 0px !important;
+    padding-left: 6px !important;
+    font-size: 13px;
+  }
+
+}
+// only for switch input and coupon plugin project
+.form-switch .form-check-input {
+
+  margin-left: -1.5em;
+
+}
+.form-check {
+  padding-left: 1.5em;
+
+}
